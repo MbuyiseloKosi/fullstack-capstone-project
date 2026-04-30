@@ -1,106 +1,24 @@
-Current Mongosh Log ID: 69f32a541661b432353682d0
-Connecting to:          mongodb+srv://<credentials>@cluster0.rwdg25i.mongodb.net/?appName=giftlink_db
-Using MongoDB:          8.0.21
-Using Mongosh:          2.8.2
-
-For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
-
-
-To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
-You can opt-out by running the disableTelemetry() command.
-
-Atlas atlas-13wlze-shard-0 [primary] test> use giftlink_db;
-|
-| const items = [
-|   {"name": "Wooden Chair", "category": "Furniture", "description": "Solid wood dining chair in good condition.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "Glass Coffee Table", "category": "Furniture", "description": "Modern glass top table with metal legs.", "condition": "Like New", "location": "Pretoria"},
-|   {"name": "Desk Lamp", "category": "Lighting", "description": "Adjustable LED desk lamp, black.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Bookshelf", "category": "Furniture", "description": "5-tier wooden bookshelf.", "condition": "Fair", "location": "Durban"},
-|   {"name": "Ceramic Vase", "category": "Decor", "description": "Hand-painted ceramic vase.", "condition": "Excellent", "location": "Johannesburg"},
-|   {"name": "Area Rug", "category": "Decor", "description": "Blue and white patterned rug (2x3m).", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Wall Mirror", "category": "Decor", "description": "Large rectangular mirror with wooden frame.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Potted Fern", "category": "Garden", "description": "Healthy fern in a terracotta pot.", "condition": "Good", "location": "Durban"},
-|   {"name": "Mountain Bike", "category": "Sports", "description": "26-inch mountain bike, needs minor tune-up.", "condition": "Fair", "location": "Johannesburg"},
-|   {"name": "Bicycle Helmet", "category": "Sports", "description": "Safety helmet, size M.", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Camping Tent", "category": "Sports", "description": "2-person waterproof tent.", "condition": "Like New", "location": "Cape Town"},
-|   {"name": "Non-Stick Pot Set", "category": "Kitchen", "description": "Set of 3 pots with lids.", "condition": "Good", "location": "Durban"},
-|   {"name": "Electric Blender", "category": "Kitchen", "description": "High-speed blender, works perfectly.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "2-Slice Toaster", "category": "Kitchen", "description": "Silver chrome toaster.", "condition": "Fair", "location": "Pretoria"},
-|   {"name": "Drip Coffee Maker", "category": "Kitchen", "description": "Makes 12 cups, includes filter.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Stainless Steel Cutlery Set", "category
-switched to db giftlink_db;
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> use giftlink_db;
-|
-| const items = [
-|   {"name": "Wooden Chair", "category": "Furniture", "description": "Solid wood dining chair in good condition.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "Glass Coffee Table", "category": "Furniture", "description": "Modern glass top table with metal legs.", "condition": "Like New", "location": "Pretoria"},
-|   {"name": "Desk Lamp", "category": "Lighting", "description": "Adjustable LED desk lamp, black.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Bookshelf", "category": "Furniture", "description": "5-tier wooden bookshelf.", "condition": "Fair", "location": "Durban"},
-|   {"name": "Ceramic Vase", "category": "Decor", "description": "Hand-painted ceramic vase.", "condition": "Excellent", "location": "Johannesburg"},
-|   {"name": "Area Rug", "category": "Decor", "description": "Blue and white patterned rug (2x3m).", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Wall Mirror", "category": "Decor", "description": "Large rectangular mirror with wooden frame.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Potted Fern", "category": "Garden", "description": "Healthy fern in a terracotta pot.", "condition": "Good", "location": "Durban"},
-|   {"name": "Mountain Bike", "category": "Sports", "description": "26-inch mountain bike, needs minor tune-up.", "condition": "Fair", "location": "Johannesburg"},
-|   {"name": "Bicycle Helmet", "category": "Sports", "description": "Safety helmet, size M.", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Camping Tent", "category": "Sports", "description": "2-person waterproof tent.", "condition": "Like New", "location": "Cape Town"},
-|   {"name": "Non-Stick Pot Set", "category": "Kitchen", "description": "Set of 3 pots with lids.", "condition": "Good", "location": "Durban"},
-|   {"name": "Electric Blender", "category": "Kitchen", "description": "High-speed blender, works perfectly.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "2-Slice Toaster", "category": "Kitchen", "description": "Silver chrome toaster.", "condition": "Fair", "location": "Pretoria"},
-|   {"name": "Drip Coffee Maker", "category": "Kitchen", "description": "Makes 12 cups, includes filter.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Stainless Steel Cutlery Set", "category
-already on db giftlink_db;
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db.items.countDocuments()
-0
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db
-giftlink_db;
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db.items.insertOne({"name": "Test Item", "category": "Test", "description": "Checking if insert works"})
-{
-  acknowledged: true,
-  insertedId: ObjectId('69f32c831661b432353682d1')
-}
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db.items.insertMany([
-|   {"name": "Wooden Chair", "category": "Furniture", "description": "Solid wood dining chair in good condition.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "Glass Coffee Table", "category": "Furniture", "description": "Modern glass top table with metal legs.", "condition": "Like New", "location": "Pretoria"},
-|   {"name": "Desk Lamp", "category": "Lighting", "description": "Adjustable LED desk lamp, black.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Bookshelf", "category": "Furniture", "description": "5-tier wooden bookshelf.", "condition": "Fair", "location": "Durban"},
-|   {"name": "Ceramic Vase", "category": "Decor", "description": "Hand-painted ceramic vase.", "condition": "Excellent", "location": "Johannesburg"},
-|   {"name": "Area Rug", "category": "Decor", "description": "Blue and white patterned rug (2x3m).", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Wall Mirror", "category": "Decor", "description": "Large rectangular mirror with wooden frame.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Potted Fern", "category": "Garden", "description": "Healthy fern in a terracotta pot.", "condition": "Good", "location": "Durban"},
-|   {"name": "Mountain Bike", "category": "Sports", "description": "26-inch mountain bike, needs minor tune-up.", "condition": "Fair", "location": "Johannesburg"},
-|   {"name": "Bicycle Helmet", "category": "Sports", "description": "Safety helmet, size M.", "condition": "Good", "location": "Pretoria"},
-|   {"name": "Camping Tent", "category": "Sports", "description": "2-person waterproof tent.", "condition": "Like New", "location": "Cape Town"},
-|   {"name": "Non-Stick Pot Set", "category": "Kitchen", "description": "Set of 3 pots with lids.", "condition": "Good", "location": "Durban"},
-|   {"name": "Electric Blender", "category": "Kitchen", "description": "High-speed blender, works perfectly.", "condition": "Good", "location": "Johannesburg"},
-|   {"name": "2-Slice Toaster", "category": "Kitchen", "description": "Silver chrome toaster.", "condition": "Fair", "location": "Pretoria"},
-|   {"name": "Drip Coffee Maker", "category": "Kitchen", "description": "Makes 12 cups, includes filter.", "condition": "Good", "location": "Cape Town"},
-|   {"name": "Stainless Steel Cutlery Set", "category": "Kitchen", "description": "24-piece cutlery set.", "condition": "Excellent", "location": "Durban"}
-| ]);
+giftlink_db> db.items.insertMany(data)
 {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId('69f32c991661b432353682d2'),
-    '1': ObjectId('69f32c991661b432353682d3'),
-    '2': ObjectId('69f32c991661b432353682d4'),
-    '3': ObjectId('69f32c991661b432353682d5'),
-    '4': ObjectId('69f32c991661b432353682d6'),
-    '5': ObjectId('69f32c991661b432353682d7'),
-    '6': ObjectId('69f32c991661b432353682d8'),
-    '7': ObjectId('69f32c991661b432353682d9'),
-    '8': ObjectId('69f32c991661b432353682da'),
-    '9': ObjectId('69f32c991661b432353682db'),
-    '10': ObjectId('69f32c991661b432353682dc'),
-    '11': ObjectId('69f32c991661b432353682dd'),
-    '12': ObjectId('69f32c991661b432353682de'),
-    '13': ObjectId('69f32c991661b432353682df'),
-    '14': ObjectId('69f32c991661b432353682e0'),
-    '15': ObjectId('69f32c991661b432353682e1')
+    '0': ObjectId('...'),
+    '1': ObjectId('...'),
+    '2': ObjectId('...'),
+    '3': ObjectId('...'),
+    '4': ObjectId('...'),
+    '5': ObjectId('...'),
+    '6': ObjectId('...'),
+    '7': ObjectId('...'),
+    '8': ObjectId('...'),
+    '9': ObjectId('...'),
+    '10': ObjectId('...'),
+    '11': ObjectId('...'),
+    '12': ObjectId('...'),
+    '13': ObjectId('...'),
+    '14': ObjectId('...'),
+    '15': ObjectId('...')
   }
 }
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db.items.countDocuments()
-17
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;> db.items.deleteOne({"name": "Test Item"})
-{ acknowledged: true, deletedCount: 1 }
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;>  db.items.countDocuments()
+giftlink_db> db.items.countDocuments()
 16
-Atlas atlas-13wlze-shard-0 [primary] giftlink_db;>
