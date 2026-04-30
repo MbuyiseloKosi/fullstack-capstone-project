@@ -6,8 +6,11 @@ router.get('/', async (req, res) => {
   try {
     const db = await connectToDatabase();
     const items = await db.collection('items').find({}).toArray();
+    console.log('Database name:', db.databaseName);
+    console.log('Items found:', items.length);
     res.json(items);
   } catch (error) {
+    console.error('Error:', error);
     res.status(500).json({ error: 'Failed to fetch items' });
   }
 });
