@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Wooden Chair",
+    "category": "Furniture",
+    "description": "Solid wood dining chair in good condition.",
+    "condition": "Good",
+    "location": "Johannesburg"
+  },
+  {
+    "name": "Glass Coffee Table",
+    "category": "Furniture",
+    "description": "Modern glass top table with metal legs.",
+    "condition": "Like New",
+    "location": "Pretoria"
+  },
+  {
+    "name": "Desk Lamp",
+    "category": "Lighting",
+    "description": "Adjustable LED desk lamp, black.",
+    "condition": "Good",
+    "location": "Cape Town"
+  },
+  {
+    "name": "Bookshelf",
+    "category": "Furniture",
+    "description": "5-tier wooden bookshelf.",
+    "condition": "Fair",
+    "location": "Durban"
+  },
+  {
+    "name": "Ceramic Vase",
+    "category": "Decor",
+    "description": "Hand-painted ceramic vase.",
+    "condition": "Excellent",
+    "location": "Johannesburg"
+  },
+  {
+    "name": "Area Rug",
+    "category": "Decor",
+    "description": "Blue and white patterned rug (2x3m).",
+    "condition": "Good",
+    "location": "Pretoria"
+  },
+  {
+    "name": "Wall Mirror",
+    "category": "Decor",
+    "description": "Large rectangular mirror with wooden frame.",
+    "condition": "Good",
+    "location": "Cape Town"
+  },
+  {
+    "name": "Potted Fern",
+    "category": "Garden",
+    "description": "Healthy fern in a terracotta pot.",
+    "condition": "Good",
+    "location": "Durban"
+  },
+  {
+    "name": "Mountain Bike",
+    "category": "Sports",
+    "description": "26-inch mountain bike, needs minor tune-up.",
+    "condition": "Fair",
+    "location": "Johannesburg"
+  },
+  {
+    "name": "Bicycle Helmet",
+    "category": "Sports",
+    "description": "Safety helmet, size M.",
+    "condition": "Good",
+    "location": "Pretoria"
+  },
+  {
+    "name": "Camping Tent",
+    "category": "Sports",
+    "description": "2-person waterproof tent.",
+    "condition": "Like New",
+    "location": "Cape Town"
+  },
+  {
+    "name": "Non-Stick Pot Set",
+    "category": "Kitchen",
+    "description": "Set of 3 pots with lids.",
+    "condition": "Good",
+    "location": "Durban"
+  },
+  {
+    "name": "Electric Blender",
+    "category": "Kitchen",
+    "description": "High-speed blender, works perfectly.",
+    "condition": "Good",
+    "location": "Johannesburg"
+  },
+  {
+    "name": "2-Slice Toaster",
+    "category": "Kitchen",
+    "description": "Silver chrome toaster.",
+    "condition": "Fair",
+    "location": "Pretoria"
+  },
+  {
+    "name": "Drip Coffee Maker",
+    "category": "Kitchen",
+    "description": "Makes 12 cups, includes filter.",
+    "condition": "Good",
+    "location": "Cape Town"
+  },
+  {
+    "name": "Stainless Steel Cutlery Set",
+    "category": "Kitchen",
+    "description": "24-piece cutlery set.",
+    "condition": "Excellent",
+    "location": "Durban"
+  }
+]
