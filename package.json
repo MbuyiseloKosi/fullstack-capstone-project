@@ -1,0 +1,28 @@
+{
+  "name": "fullstack-capstone-project",
+  "version": "1.0.0",
+  "description": "GiftLink - A full-stack gift exchange platform",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "nodemon backend/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^5.9.0",
+    "natural": "^6.10.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MbuyiseloKosi/fullstack-capstone-project"
+  },
+  "author": "Mbuyiselo Kosi",
+  "license": "ISC"
+}
