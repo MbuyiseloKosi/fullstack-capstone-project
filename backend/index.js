@@ -17,6 +17,7 @@ app.use('/api/gifts', giftRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/auth', authRoutes);
 
+// Landing Page (Task 12)
 app.get('/', (req, res) => {
   res.send(`
     <html>
@@ -40,6 +41,37 @@ app.get('/', (req, res) => {
   `);
 });
 
+// Seed Route (inserts 16 items directly into connected database)
+app.get('/seed', async (req, res) => {
+  try {
+    const { connectToDatabase } = require('./db');
+    const db = await connectToDatabase();
+    await db.collection('items').deleteMany({});
+    const result = await db.collection('items').insertMany([
+      {"name": "Wooden Chair", "category": "Furniture", "description": "Solid wood dining chair.", "condition": "Good", "location": "Johannesburg"},
+      {"name": "Glass Coffee Table", "category": "Furniture", "description": "Modern glass top table.", "condition": "Like New", "location": "Pretoria"},
+      {"name": "Desk Lamp", "category": "Lighting", "description": "Adjustable LED desk lamp.", "condition": "Good", "location": "Cape Town"},
+      {"name": "Bookshelf", "category": "Furniture", "description": "5-tier wooden bookshelf.", "condition": "Fair", "location": "Durban"},
+      {"name": "Ceramic Vase", "category": "Decor", "description": "Hand-painted ceramic vase.", "condition": "Excellent", "location": "Johannesburg"},
+      {"name": "Area Rug", "category": "Decor", "description": "Blue and white patterned rug.", "condition": "Good", "location": "Pretoria"},
+      {"name": "Wall Mirror", "category": "Decor", "description": "Large rectangular mirror.", "condition": "Good", "location": "Cape Town"},
+      {"name": "Potted Fern", "category": "Garden", "description": "Healthy fern in a terracotta pot.", "condition": "Good", "location": "Durban"},
+      {"name": "Mountain Bike", "category": "Sports", "description": "26-inch mountain bike.", "condition": "Fair", "location": "Johannesburg"},
+      {"name": "Bicycle Helmet", "category": "Sports", "description": "Safety helmet size M.", "condition": "Good", "location": "Pretoria"},
+      {"name": "Camping Tent", "category": "Sports", "description": "2-person waterproof tent.", "condition": "Like New", "location": "Cape Town"},
+      {"name": "Non-Stick Pot Set", "category": "Kitchen", "description": "Set of 3 pots with lids.", "condition": "Good", "location": "Durban"},
+      {"name": "Electric Blender", "category": "Kitchen", "description": "High-speed blender.", "condition": "Good", "location": "Johannesburg"},
+      {"name": "2-Slice Toaster", "category": "Kitchen", "description": "Silver chrome toaster.", "condition": "Fair", "location": "Pretoria"},
+      {"name": "Drip Coffee Maker", "category": "Kitchen", "description": "Makes 12 cups.", "condition": "Good", "location": "Cape Town"},
+      {"name": "Stainless Steel Cutlery Set", "category": "Kitchen", "description": "24-piece cutlery set.", "condition": "Excellent", "location": "Durban"}
+    ]);
+    res.json({ message: 'Seeded successfully', count: result.insertedCount });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Start server
 app.listen(PORT, () => {
   console.log('Server is running on port ' + PORT);
 });
